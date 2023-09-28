@@ -6,6 +6,7 @@ import org.example.pojo.util.FileUtil;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
@@ -14,9 +15,7 @@ public class Main {
     private static String e = null;
     private static String a = null;
 
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
+
     /**
      * @param exercisePath 内含表达式的文件路径
      * @param answerPath 存放计算结果的文件路径
@@ -46,5 +45,24 @@ public class Main {
         sb2.append("Wrong:").append(wrongs.size()).append("(");
         sb2.append(String.join(",", wrongs)).append(")");
         FileUtil.write(gradePath, Arrays.asList(sb1.toString(), sb2.toString()));
+    }
+    /**
+     * @param exerciseNum 所需生成的题目数量
+     * @param valueLimitation 指定范围参数,操作数及操作数分母＜valueLimitation
+     * */
+    public static void generateExercise(int exerciseNum, int valueLimitation){
+        List<Equation> list = new ArrayList<>();
+        Random r = new Random();
+        //随机生成表达式,并筛掉重复的,直到数量达到目标
+        for(;list.size()<exerciseNum;) {
+            int operandNo = r.nextInt(3) + 2;
+            int operatorNo = operandNo - 1;
+            int bracketsNo = 1;
+            list.add(Equation.generate(operandNo, operatorNo, bracketsNo, 1, valueLimitation));
+            Equation.filter(list);
+        }
+        //写入文件
+        FileUtil.write("Exercises.txt", list.stream().map(Equation::toString).toList());
+        FileUtil.write("Answers.txt", list.stream().map(e -> e.getResult() + "").toList());
     }
 }

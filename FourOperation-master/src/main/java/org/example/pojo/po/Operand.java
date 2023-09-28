@@ -7,7 +7,7 @@ import java.util.Random;
 
 /**
  * 操作数类
- * @author 3121005035, OuroborosNo2
+ * @author 3121005018, yc
  * */
 public class Operand extends Arithmetic{
     //操作数类型,区分自然数(0)和真分数(1)

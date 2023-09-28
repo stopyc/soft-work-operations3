@@ -2,7 +2,7 @@ package org.example.pojo.po;
 
 /**
  * 算术类,包含运算符,操作数,括号等子类
- * @author 3121005035, OuroborosNo2
+ * @author 3121005018, yc
  * */
 public class Arithmetic {
     //值

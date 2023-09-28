@@ -2,7 +2,7 @@ package org.example.pojo.po;
 
 /**
  * 括号类
- * @author 3121005035, OuroborosNo2
+ * @author 3121005017, yef
  * */
 public class Brackets extends Arithmetic{
     //括号类型,只有左(0),右(1)两种

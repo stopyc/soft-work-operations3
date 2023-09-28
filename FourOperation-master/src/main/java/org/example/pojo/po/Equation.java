@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 /**
  * 表达式类
- * @author 3121005035, OuroborosNo2
+ * @author 3121005018, yc
  * */
 public class Equation {
     //中缀表达式

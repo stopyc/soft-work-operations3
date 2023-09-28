@@ -2,7 +2,7 @@ package org.example.pojo.po;
 
 /**
  * 运算符类
- * @author 3121005035, OuroborosNo2
+ * @author 3121005017, yef
  * */
 public class Operator extends Arithmetic{
 
