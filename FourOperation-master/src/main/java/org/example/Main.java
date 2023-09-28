@@ -1,10 +1,19 @@
 package org.example;
 
+import org.example.pojo.po.Equation;
+import org.example.pojo.util.FileUtil;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+
+    private static Integer r = null;
+    private static Integer n = null;
+    private static String e = null;
+    private static String a = null;
+
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
