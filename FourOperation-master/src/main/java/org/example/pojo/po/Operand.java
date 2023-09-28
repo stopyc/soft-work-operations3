@@ -1,6 +1,7 @@
 package org.example.pojo.po;
 
-import pers.elysia.elysia.exception.OperandException;
+
+import org.example.pojo.exception.OperandException;
 
 import java.util.Random;
 
