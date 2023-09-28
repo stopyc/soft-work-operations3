@@ -65,4 +65,29 @@ public class Main {
         FileUtil.write("Exercises.txt", list.stream().map(Equation::toString).toList());
         FileUtil.write("Answers.txt", list.stream().map(e -> e.getResult() + "").toList());
     }
+
+
+    /**
+     * @param args 命令行参数数组
+     * */
+    public static void processArgs(String[] args){
+        for(int i=0;i< args.length;i++){
+            switch (args[i]){
+                //可能有输入错误
+                case "-r" -> r = Integer.parseInt(args[i+1]);
+                case "-n" -> n = Integer.parseInt(args[i+1]);
+                case "-e" -> e = args[i+1];
+                case "-a" -> a = args[i+1];
+            }
+        }
+    }
+
+    /**
+     * @param equation1 表达式1
+     * @param equation2 表达式2
+     * @return 返回两表达式是否重复
+     * */
+    public static boolean checkRepetition(Equation equation1, Equation equation2){
+        return true;
+    }
 }
